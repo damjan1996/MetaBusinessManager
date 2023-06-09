@@ -1,0 +1,28 @@
+Title: Facebook Ads Campaign Insights Reporting Tool
+
+Description:
+The Facebook Ads Campaign Insights Reporting Tool is a Python project that interacts with the Facebook Ads API to fetch data and provide insights on the performance of a specific ad campaign.
+The tool also includes functionality to compile these insights into a well-structured report and automatically send it via email to a pre-defined recipient list.
+
+The main functions in the script are:
+
+1. get_campaign_insights:
+This function connects to the Facebook Ads API and retrieves insights for a given campaign over a specific date range.
+It takes as input a campaign ID and the date range (start and end dates) for which insights are required.
+The insights returned include the campaign spend, number of clicks, and cost-per-click (CPC) over the provided date range.
+
+2. prepare_email:
+This function creates an email with a given summary text.
+It sets the sender and receiver email addresses, the subject line, and attaches the summary text to the email body.
+
+3. send_email:
+This function establishes a connection to an SMTP server and sends an email using the server.
+It takes as input the server details (server address and port), login credentials (username and password), and the email text to be sent.
+
+4. main:
+This function sets up the Facebook Ads API credentials, specifies the ad campaign to analyze, fetches insights for the last 24 hours and since the beginning of the campaign, formats these insights into a report, and sends this report as an email to a predefined list of recipients.
+
+This tool can be particularly useful for marketing professionals or businesses who require daily updates on the performance of their Facebook ad campaigns.
+This tool can be scheduled to run on a daily basis, automating the process of fetching campaign insights and sending the reports via email.
+
+Please note that you need to replace placeholders in the script (e.g., 'your_app_id', 'your_app_secret', 'your_access_token', 'your_campaign_id', etc.) with your actual values before running the script.
